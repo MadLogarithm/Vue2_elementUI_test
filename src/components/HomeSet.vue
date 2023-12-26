@@ -3,27 +3,30 @@
     <el-container class="home-container" >
         <el-header>main</el-header>
         <el-container style="height:648px">
-            <el-aside width="250px">
+            <el-aside width="200px">
             <!-- <div class="toggle-botton" @click="toggleCollapse">|||</div> -->
                 <el-menu background-color=black text-color="#fff" active-text-color="#409EFF" :router="true">
-                    <el-menu-item index="/home">home</el-menu-item>
+                    <el-menu-item class="el-icon-s-home" index="/home"> Home</el-menu-item>
                     <el-submenu index="2">
                         <template slot="title">
-                            <span>二</span>
+                            <i class="el-icon-s-data"></i>
+                            <span>Empty2</span>
                         </template>
-                        <el-menu-item>1</el-menu-item>
+                        <el-menu-item class="el-icon-menu">SubE</el-menu-item>
                     </el-submenu>
                     <el-submenu index="3">
                         <template slot="title">
-                            <span>三</span>
+                            <i class="el-icon-s-order"></i>
+                            <span>InfiList</span>
                         </template>
-                        <el-menu-item index="/list">1</el-menu-item>
+                        <el-menu-item class="el-icon-menu" index="/list">List</el-menu-item>
                     </el-submenu>
                     <el-submenu index="4">
                         <template slot="title">
-                            <span>四</span>
+                            <i class="el-icon-s-data"></i>
+                            <span>Empty3</span>
                         </template>
-                        <el-menu-item>1</el-menu-item>
+                        <el-menu-item class="el-icon-menu">SubE</el-menu-item>
                     </el-submenu>
                 </el-menu>
             </el-aside>
