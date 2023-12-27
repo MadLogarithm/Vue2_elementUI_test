@@ -5,9 +5,10 @@
     v-infinite-scroll="load"
     infinite-scroll-disabled="disabled">
     <li v-for="i in count" class="list-item" :key="i">
-        <el-card class="box-card">
+        <el-card class="box-card" shadow="hover">
         <div slot="header" class="clearfix">
-            <span>卡片{{ i }}</span>
+            <el-avatar :size="small" :src="circleUrl"></el-avatar>
+            <span class="card-head">卡片{{ i }}</span>
             <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
         </div>
         <div v-for="o in 2" :key="o" class="text item">
@@ -43,7 +44,8 @@ export default {
             value: true,
             isCollapse: false,
             count: 4,
-            loading: false
+            loading: false,
+            circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
         };
     },
     computed: {
@@ -78,6 +80,15 @@ content: "";
 clear: both
 }
 .box-card {
-width: 480px;
+padding: 20px;
+margin-bottom: 20px;
+width: 1000px;
+}
+.card-head {
+text-align: center;
+align-items: center;
+}
+.list-item {
+list-style: none;
 }
 </style>
