@@ -73,7 +73,8 @@ margin-bottom: 18px;
 }
 .clearfix:before,
 .clearfix:after {
-display: table;
+display: flex;
+align-items: center;
 content: "";
 }
 .clearfix:after {
@@ -82,11 +83,10 @@ clear: both
 .box-card {
 padding: 20px;
 margin-bottom: 20px;
-width: 1000px;
+width: 600px;
 }
 .card-head {
 text-align: center;
-align-items: center;
 }
 .list-item {
 list-style: none;
