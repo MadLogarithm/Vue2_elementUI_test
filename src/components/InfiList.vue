@@ -18,8 +18,7 @@
     </ul>
     <p v-if="loading">
     <i class="el-icon-loading" style="font-size: 20px;"></i>
-    <el-skeleton :rows="1" animated />
-    <el-skeleton :rows="1" animated />
+    <el-skeleton style="width: 240px; height: 240px;" animated />
     </p>
     <p v-if="noMore">没有更多了</p>
 </div>
@@ -59,23 +58,10 @@ export default {
 </script>
 
 <style>
-.home-container {
-flex-wrap: wrap;
-height: 100%;
-}
 html,body,#app {
 margin: 0;
 padding: 0;
 height: 100%;
-}
-.toggle-botton {
-background-color: black;
-color: white;
-font-size: 10px;
-line-height: 24px;
-text-align: center;
-letter-spacing: 0.2em;
-cursor: pointer;  
 }
 .text {
 font-size: 14px;
