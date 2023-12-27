@@ -5,8 +5,19 @@
         <el-container style="height:648px">
             <el-aside width="200px">
             <!-- <div class="toggle-botton" @click="toggleCollapse">|||</div> -->
-                <el-menu background-color=black text-color="#fff" active-text-color="#409EFF" :router="true">
-                    <el-menu-item class="el-icon-s-home" index="/home"> Home</el-menu-item>
+                <el-menu background-color=black 
+                        text-color="#fff" 
+                        active-text-color="#409EFF" 
+                        :router="true" 
+                        :collapse="isCollapse" 
+                        :collapse-transition="false"
+                        :default-active="'/home'">
+                    <el-menu-item index="/home">
+                        <template slot="title">
+                            <i class="el-icon-s-home"></i>
+                            <span>Home</span>
+                        </template>
+                    </el-menu-item>
                     <el-submenu index="2">
                         <template slot="title">
                             <i class="el-icon-s-data"></i>
