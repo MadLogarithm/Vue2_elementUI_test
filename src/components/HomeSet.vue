@@ -88,6 +88,7 @@ flex-wrap: wrap;
 height: 100%;
 }
 .el-header {
+text-align: center;
 background-color: #2c3e50;
 color: white;
 }

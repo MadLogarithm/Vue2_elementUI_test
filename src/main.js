@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import HomeSet from "./components/HomeSet.vue"
 import InfiList from "./components/InfiList.vue"
 import HelloWorld from "./components/HelloWorld.vue"
+import PersonData from "./components/PersonData.vue"
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -29,6 +30,10 @@ const router = new VueRouter({
             component: InfiList
          }
         ]
+      },
+      {
+        path: '/person',
+        component: PersonData
       }
     ],
     mode: 'hash'
