@@ -7,6 +7,7 @@
                 <el-menu background-color="black"
                         text-color="white"
                         active-text-color="#409EFF"
+                        :default-active="'/person'"
                         :router="true"
                         >
                     <el-menu-item index="/home">
@@ -15,7 +16,12 @@
                             <span>Home</span>
                         </template>
                     </el-menu-item>
-                    <el-menu-item>1</el-menu-item>
+                    <el-menu-item index="/person">
+                        <template slot="title">
+                            <i class="el-icon-s-custom"></i>
+                            <span>PersonTest</span>
+                        </template>
+                    </el-menu-item>
                 </el-menu>
             </el-aside>
         </el-container>
