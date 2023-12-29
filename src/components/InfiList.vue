@@ -18,7 +18,7 @@
     </li>
     </ul>
     <p v-if="loading">
-    <i class="el-icon-loading" style="font-size: 20px;"></i>
+    <i class="el-icon-loading" style="font-size: 20px;"></i>Loading...
     <el-skeleton style="width: 240px; height: 240px;" animated />
     </p>
     <p v-if="noMore">没有更多了</p>
@@ -62,7 +62,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 html,body,#app {
 margin: 0;
 padding: 0;

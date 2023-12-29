@@ -2,7 +2,7 @@
 <div id="app">
     <el-container class="home-container">
         <el-header>main</el-header>
-        <el-container>
+        <el-container style="height:648px">
             <el-aside width="200px">
                 <el-menu background-color="black"
                         text-color="white"
@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .home-container {
 flex-wrap: wrap;
 height: 100%;
@@ -54,7 +54,10 @@ color: black;
 .el-aside {
 background-color: black;
 color: white;
-text-align: center;
+text-align: left;
+    .el-menu {
+        border-right: 0px;
+    }
 }
 html,body,#app {
 margin: 0;

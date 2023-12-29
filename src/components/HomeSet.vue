@@ -21,9 +21,9 @@
                     <el-submenu index="2">
                         <template slot="title">
                             <i class="el-icon-s-data"></i>
-                            <span>Empty2</span>
+                            <span>Test</span>
                         </template>
-                        <el-menu-item class="el-icon-menu" index="/person">SubE</el-menu-item>
+                        <el-menu-item class="el-icon-s-custom" index="/person">SubT</el-menu-item>
                     </el-submenu>
                     <el-submenu index="3">
                         <template slot="title">
@@ -82,7 +82,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .home-container {
 flex-wrap: wrap;
 height: 100%;
@@ -99,7 +99,10 @@ color: black;
 .el-aside {
 background-color: black;
 color: white;
-text-align: center;
+text-align: left;
+    .el-menu {
+        border-right: 0px;
+    }
 }
 html,body,#app {
 margin: 0;
