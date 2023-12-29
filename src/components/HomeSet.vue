@@ -23,7 +23,7 @@
                             <i class="el-icon-s-data"></i>
                             <span>Empty2</span>
                         </template>
-                        <el-menu-item class="el-icon-menu">SubE</el-menu-item>
+                        <el-menu-item class="el-icon-menu" index="/person">SubE</el-menu-item>
                     </el-submenu>
                     <el-submenu index="3">
                         <template slot="title">

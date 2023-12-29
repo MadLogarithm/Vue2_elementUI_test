@@ -3,11 +3,18 @@
     <el-container class="home-container">
         <el-header>main</el-header>
         <el-container>
-            <el-aside>
+            <el-aside width="200px">
                 <el-menu background-color="black"
                         text-color="white"
                         active-text-color="#409EFF"
+                        :router="true"
                         >
+                    <el-menu-item index="/home">
+                    <template slot="title">
+                        <i class="el-icon-s-home"></i>
+                        <span>Home</span>
+                    </template>
+                    </el-menu-item>
                     <el-menu-item>1</el-menu-item>
                 </el-menu>
             </el-aside>
