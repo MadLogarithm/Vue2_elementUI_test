@@ -10,10 +10,10 @@
                         :router="true"
                         >
                     <el-menu-item index="/home">
-                    <template slot="title">
-                        <i class="el-icon-s-home"></i>
-                        <span>Home</span>
-                    </template>
+                        <template slot="title">
+                            <i class="el-icon-s-home"></i>
+                            <span>Home</span>
+                        </template>
                     </el-menu-item>
                     <el-menu-item>1</el-menu-item>
                 </el-menu>

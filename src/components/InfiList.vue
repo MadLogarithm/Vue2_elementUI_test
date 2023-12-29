@@ -22,6 +22,9 @@
     <el-skeleton style="width: 240px; height: 240px;" animated />
     </p>
     <p v-if="noMore">没有更多了</p>
+    <template>
+        <el-backtop target=".infinite-list-wrapper"></el-backtop>
+    </template>
 </div>
 </template>
 
