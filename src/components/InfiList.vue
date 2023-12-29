@@ -18,8 +18,8 @@
     </li>
     </ul>
     <p v-if="loading">
-    <i class="el-icon-loading" style="font-size: 20px;"></i>Loading...
-    <el-skeleton style="width: 240px; height: 240px;" animated />
+    <i class="el-icon-loading" style="font-size: 20px; padding: 20px;"></i>Loading...
+    <el-skeleton style="width: 240px; height: 240px; padding-left: 40px;" animated />
     </p>
     <p v-if="noMore">没有更多了</p>
     <template>
