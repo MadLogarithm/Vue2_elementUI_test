@@ -7,6 +7,7 @@ import InfiList from "./components/InfiList.vue"
 import HelloWorld from "./components/HelloWorld.vue"
 import PersonData from "./components/PersonData.vue"
 import PersonIntro from "./components/PersonIntro.vue"
+import TimeMagazine from "./components/TimeMagazine.vue"
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -39,6 +40,10 @@ const router = new VueRouter({
       {
         path: '/intro',
         component: PersonIntro
+      },
+      {
+        path: '/time_magazine',
+        component: TimeMagazine
       }
     ],
     mode: 'hash'
