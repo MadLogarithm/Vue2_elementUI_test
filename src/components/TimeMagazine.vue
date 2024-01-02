@@ -2,8 +2,8 @@
 <div class="time-magazine">
     <el-container>
         <el-header class="transparent-navbar">
-            <el-menu mode="horizontal" class="navbar" background-color="transparent" text-color="#000" active-text-color="#ffd04b">
-            <el-menu-item index="1">Home</el-menu-item>
+            <el-menu mode="horizontal" class="navbar" background-color="transparent" text-color="#000" active-text-color="#ffd04b" :router="true">
+            <el-menu-item index="/home">Home</el-menu-item>
             <el-submenu index="2">
                 <template slot="title">Sections</template>
                 <el-menu-item index="2-1">Politics</el-menu-item>
