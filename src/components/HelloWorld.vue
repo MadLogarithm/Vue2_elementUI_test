@@ -5,6 +5,9 @@
       设置InfiList.vue中box-card内容
     </ul>
     <ul>
+      页面的el-backtop总出bug，并且不太会解决
+    </ul>
+    <ul>
       ...
     </ul>
   </div>
