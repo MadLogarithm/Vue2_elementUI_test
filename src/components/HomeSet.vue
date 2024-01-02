@@ -37,7 +37,7 @@
                             <i class="el-icon-s-data"></i>
                             <span>Empty3</span>
                         </template>
-                        <el-menu-item class="el-icon-menu">SubE</el-menu-item>
+                        <el-menu-item class="el-icon-menu" index="/intro">Intro</el-menu-item>
                     </el-submenu>
                 </el-menu>
             </el-aside>
