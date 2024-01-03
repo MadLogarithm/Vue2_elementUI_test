@@ -11,7 +11,7 @@
                         :router="true" 
                         :collapse="isCollapse" 
                         :collapse-transition="false"
-                        :default-active="'/home'">
+                        :default-active="$route.path">
                     <el-menu-item index="/home">
                         <template slot="title">
                             <i class="el-icon-s-home"></i>

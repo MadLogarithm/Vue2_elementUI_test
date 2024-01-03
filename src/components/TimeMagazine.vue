@@ -9,6 +9,7 @@
                 <el-menu-item index="2-1">Politics</el-menu-item>
                 <el-menu-item index="2-2">Business</el-menu-item>
                 <el-menu-item index="2-3">Entertainment</el-menu-item>
+                <el-menu-item index="/list">List</el-menu-item>
             </el-submenu>
             <el-menu-item index="3">About</el-menu-item>
             </el-menu>
