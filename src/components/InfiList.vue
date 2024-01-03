@@ -4,22 +4,22 @@
     class="list"
     v-infinite-scroll="load"
     infinite-scroll-disabled="disabled">
-    <li v-for="i in count" class="list-item" :key="i">
-        <el-card class="box-card" shadow="hover">
-        <div slot="header" class="clearfix">
-            <el-avatar :size="small" :src="circleUrl"></el-avatar>
-            <span class="card-head">卡片{{ i }}</span>
-            <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-        </div>
-        <div v-for="o in 2" :key="o" class="text item">
-            {{'列表内容 ' + o }}
-        </div>
-        </el-card>
-    </li>
+        <li v-for="i in count" class="list-item" :key="i">
+            <el-card class="box-card" shadow="hover">
+            <div slot="header" class="clearfix">
+                <el-avatar :size="small" :src="circleUrl"></el-avatar>
+                <span class="card-head">卡片{{ i }}</span>
+                <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+            </div>
+            <div v-for="o in 2" :key="o" class="text item">
+                {{'列表内容 ' + o }}
+            </div>
+            </el-card>
+        </li>
     </ul>
     <p v-if="loading">
-    <i class="el-icon-loading" style="font-size: 20px; padding: 20px;"></i>Loading...
-    <el-skeleton style="width: 240px; height: 240px; padding-left: 40px;" animated />
+        <i class="el-icon-loading" style="font-size: 20px; padding: 20px;"></i>Loading...
+        <el-skeleton style="width: 240px; height: 240px; padding-left: 40px;" animated />
     </p>
     <p v-if="noMore">没有更多了</p>
     <template>

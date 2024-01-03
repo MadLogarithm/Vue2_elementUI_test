@@ -3,30 +3,30 @@
     <el-container>
         <el-header class="transparent-navbar">
             <el-menu mode="horizontal" class="navbar" :style="{ 'background-color': menuTransparentNavbar ? 'transparent' : 'white' }" text-color="#000" active-text-color="#ffd04b" :router="true">
-            <el-menu-item index="/home">Home</el-menu-item>
-            <el-submenu index="2">
-                <template slot="title">Sections</template>
-                <el-menu-item index="2-1">Politics</el-menu-item>
-                <el-menu-item index="2-2">Business</el-menu-item>
-                <el-menu-item index="2-3">Entertainment</el-menu-item>
-                <el-menu-item index="/list">List</el-menu-item>
-            </el-submenu>
-            <el-menu-item index="3">About</el-menu-item>
+                <el-menu-item index="/home">Home</el-menu-item>
+                <el-submenu index="2">
+                    <template slot="title">Sections</template>
+                    <el-menu-item index="2-1">Politics</el-menu-item>
+                    <el-menu-item index="2-2">Business</el-menu-item>
+                    <el-menu-item index="2-3">Entertainment</el-menu-item>
+                    <el-menu-item index="/list">List</el-menu-item>
+                </el-submenu>
+                <el-menu-item index="3">About</el-menu-item>
             </el-menu>
         </el-header>
     <el-main style="height: 1200px;">
         <!-- 在这里放置文章内容 -->
         <div class="article-content">
-        <p>这里是文章的内容...</p>
-        <p>{{ menuTransparentNavbar }}</p>
-        <p>{{ menuTransparentNavbar }}</p>
-        <p>{{ menuTransparentNavbar }}</p>
-        <p>{{ menuTransparentNavbar }}</p>
-        <p>{{ menuTransparentNavbar }}</p>
-        <p>{{ menuTransparentNavbar }}</p>
-        <p>{{ menuTransparentNavbar }}</p>
-        <p>{{ menuTransparentNavbar }}</p>
-        <p>{{ menuTransparentNavbar }}</p>
+            <p>这里是文章的内容...</p>
+            <p>{{ menuTransparentNavbar }}</p>
+            <p>{{ menuTransparentNavbar }}</p>
+            <p>{{ menuTransparentNavbar }}</p>
+            <p>{{ menuTransparentNavbar }}</p>
+            <p>{{ menuTransparentNavbar }}</p>
+            <p>{{ menuTransparentNavbar }}</p>
+            <p>{{ menuTransparentNavbar }}</p>
+            <p>{{ menuTransparentNavbar }}</p>
+            <p>{{ menuTransparentNavbar }}</p>
         </div>
         <el-backtop :bottom="50" :right="50"></el-backtop>
     </el-main>
