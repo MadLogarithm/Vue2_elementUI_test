@@ -48,7 +48,7 @@ data() {
     };
 },
 mounted() {
-     // 添加滚动事件监听器来控制导航栏透明度
+    // 添加滚动事件监听器来控制导航栏透明度
     window.addEventListener('scroll', this.handleScroll);
 },
 beforeDestroy() {
