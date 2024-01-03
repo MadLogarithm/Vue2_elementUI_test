@@ -47,12 +47,15 @@ data() {
     };
 },
 mounted() {
+     // 添加滚动事件监听器来控制导航栏透明度
     window.addEventListener('scroll', this.handleScroll);
 },
 beforeDestroy() {
+    // 在组件销毁前移除滚动事件监听器，以避免内存泄漏
     window.removeEventListener('scroll', this.handleScroll);
 },
 methods: {
+    // 根据滚动位置控制导航栏透明度
     handleScroll() {
         if (window.scrollY > 100) {
             this.menuTransparentNavbar = false;
