@@ -27,6 +27,7 @@
         <p>{{ menuTransparentNavbar }}</p>
         <p>{{ menuTransparentNavbar }}</p>
         </div>
+        <el-backtop :bottom="50" :right="50"></el-backtop>
     </el-main>
     <el-footer>
         <!-- 在这里放置页脚内容 -->
