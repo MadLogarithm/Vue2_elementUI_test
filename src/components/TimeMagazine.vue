@@ -2,7 +2,7 @@
 <div class="time-magazine">
     <el-container>
         <el-header class="transparent-navbar">
-            <el-menu mode="horizontal" class="navbar" background-color="transparent" text-color="#000" active-text-color="#ffd04b" :router="true">
+            <el-menu mode="horizontal" class="navbar" :style="{ 'background-color': menuTransparentNavbar ? 'transparent' : 'white' }" text-color="#000" active-text-color="#ffd04b" :router="true">
             <el-menu-item index="/home">Home</el-menu-item>
             <el-submenu index="2">
                 <template slot="title">Sections</template>
@@ -13,15 +13,24 @@
             <el-menu-item index="3">About</el-menu-item>
             </el-menu>
         </el-header>
-    <el-main>
+    <el-main style="height: 1200px;">
         <!-- 在这里放置文章内容 -->
         <div class="article-content">
         <p>这里是文章的内容...</p>
+        <p>{{ menuTransparentNavbar }}</p>
+        <p>{{ menuTransparentNavbar }}</p>
+        <p>{{ menuTransparentNavbar }}</p>
+        <p>{{ menuTransparentNavbar }}</p>
+        <p>{{ menuTransparentNavbar }}</p>
+        <p>{{ menuTransparentNavbar }}</p>
+        <p>{{ menuTransparentNavbar }}</p>
+        <p>{{ menuTransparentNavbar }}</p>
+        <p>{{ menuTransparentNavbar }}</p>
         </div>
     </el-main>
     <el-footer>
         <!-- 在这里放置页脚内容 -->
-        <p>© 2023 Time Magazine. All rights reserved.</p>
+        <p>© 2023 Logar. All rights reserved.</p>
     </el-footer>
     </el-container>
 </div>
@@ -33,7 +42,24 @@ name: 'TimeMagazine',
 data() {
     return {
     // 在这里添加页面数据
+        menuTransparentNavbar: true
     };
+},
+mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+},
+beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+},
+methods: {
+    handleScroll() {
+        if (window.scrollY > 100) {
+            this.menuTransparentNavbar = false;
+        }
+        else {
+            this.menuTransparentNavbar = true;
+        }
+    }
 }
 };
 </script>
