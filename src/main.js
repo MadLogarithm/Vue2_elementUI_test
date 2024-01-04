@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import './plugins/element.js'
 import VueRouter from 'vue-router'
+import * as echarts from 'echarts'
 import HomeSet from "./components/HomeSet.vue"
 import InfiList from "./components/InfiList.vue"
 import HelloWorld from "./components/HelloWorld.vue"
@@ -11,6 +12,7 @@ import TimeMagazine from "./components/TimeMagazine.vue"
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
+Vue.prototype.$echarts = echarts
 
 const router = new VueRouter({
     routes: [

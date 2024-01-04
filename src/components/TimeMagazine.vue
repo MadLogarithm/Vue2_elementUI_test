@@ -2,7 +2,9 @@
 <div class="time-magazine">
     <el-container>
         <el-header class="transparent-navbar">
-            <el-menu mode="horizontal" class="navbar" :style="{ 'background-color': menuTransparentNavbar ? 'transparent' : 'white' }" text-color="#000" active-text-color="#ffd04b" :router="true">
+            <el-menu mode="horizontal" class="navbar" 
+            :style="{ 'background-color': menuTransparentNavbar ? 'transparent' : 'white' }" 
+            text-color="#000" active-text-color="#ffd04b" :router="true">
                 <el-menu-item index="/home">Home</el-menu-item>
                 <el-submenu index="2">
                     <template slot="title">Sections</template>
@@ -28,6 +30,9 @@
             <p>{{ menuTransparentNavbar }}</p>
             <p>{{ menuTransparentNavbar }}</p>
         </div>
+        <div class="echart-test">
+            <div id="myChart" :style="{width: '50%', height: '300px'}"></div>
+        </div>
         <el-backtop :bottom="50" :right="50"></el-backtop>
     </el-main>
     <el-footer>
@@ -50,6 +55,7 @@ data() {
 mounted() {
     // 添加滚动事件监听器来控制导航栏透明度
     window.addEventListener('scroll', this.handleScroll);
+    this.drawBar();
 },
 beforeDestroy() {
     // 在组件销毁前移除滚动事件监听器，以避免内存泄漏
@@ -64,6 +70,24 @@ methods: {
         else {
             this.menuTransparentNavbar = true;
         }
+    },
+    drawBar() {
+        let myChart = this.$echarts.init(document.getElementById('myChart'))
+        myChart.setOption({
+            title: {
+                text: 'vue-echarts-test'
+            },
+            tooltip: {},
+            xAxis: {
+                data: ["0", "1", "2"]
+            },
+            yAxis: {},
+            series: [{
+                name: 'cnt',
+                type: 'bar',
+                data: [0, 1, 2]
+            }]
+        });
     }
 }
 };
