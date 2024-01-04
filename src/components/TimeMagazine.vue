@@ -48,7 +48,7 @@ export default {
 name: 'TimeMagazine',
 data() {
     return {
-    // 在这里添加页面数据
+        // 在这里添加页面数据
         menuTransparentNavbar: true
     };
 },
@@ -84,8 +84,9 @@ methods: {
             yAxis: {},
             series: [{
                 name: 'cnt',
-                type: 'bar',
-                data: [0, 1, 2]
+                type: 'line',
+                smooth: true,
+                data: [4, 1, 2]
             }]
         });
     }
