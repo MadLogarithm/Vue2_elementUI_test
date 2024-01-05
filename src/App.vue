@@ -7,9 +7,10 @@ export default {}
 </script>
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
+html,body,#app {
+margin: 0;
+padding: 0;
+height: 100%;
 }
 .footer_wrap {
   position: relative;

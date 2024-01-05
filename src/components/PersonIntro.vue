@@ -7,7 +7,7 @@
         </RouterLink>
         <div style="text-align: center; top: 10px;">main</div>
     </el-header>
-    <el-main style="height: 1200px; display: flex;">1</el-main>
+    <el-main style="height: 120px; display: flex;">1</el-main>
     </el-container>
     {{ showBackTop }}
     <el-backtop target=".intro" v-if="showBackTop" :visibility="100"></el-backtop>
