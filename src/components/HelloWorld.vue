@@ -15,7 +15,8 @@
     </ul>
     <ul>
       建个简单后端试试=>
-      <button @click="getHello">test</button>
+      <el-button @click="getHello" size="mini" round>test</el-button>
+      <el-button @click="resetHello" size="mini" round>reset</el-button>
       {{ responseMessage }}
     </ul>
     <ul>
@@ -48,6 +49,9 @@ export default {
             this.responseMessage = error;
             console.error('Error fetching hello:', error);
           });
+      },
+      resetHello() {
+        this.responseMessage = 'null';
       }
     },
     components: { RouterLink }
