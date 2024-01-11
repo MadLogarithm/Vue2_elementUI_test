@@ -14,18 +14,41 @@
       <RouterLink :to="{path:'/time_magazine'}">Click here</RouterLink>
     </ul>
     <ul>
+      建个简单后端试试=>
+      <button @click="getHello">test</button>
+      {{ responseMessage }}
+    </ul>
+    <ul>
       ...
     </ul>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
 import { RouterLink } from 'vue-router';
 
 export default {
     name: "HelloWorld",
+    data() {
+      return {
+        responseMessage: 'null'
+      };
+    },
     props: {
         msg: String,
+    },
+    methods: {
+      getHello() {
+        axios.get('http://localhost:8080/hello')
+          .then(response => {
+            this.responseMessage = response.data;
+          })
+          .catch(error => {
+            this.responseMessage = error;
+            console.error('Error fetching hello:', error);
+          });
+      }
     },
     components: { RouterLink }
 };
