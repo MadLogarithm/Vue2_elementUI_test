@@ -70,7 +70,8 @@ export default {
             this.tableData = this.parseData(response.data);
           })
           .catch(error => {
-            console.error('Error fetching hello:', error);
+            this.tableData = [{"id": "error", "name": "error", "email": "error"}];
+            console.error('Error fetching getUser:', error);
           });
       },
       resetTableData() {
