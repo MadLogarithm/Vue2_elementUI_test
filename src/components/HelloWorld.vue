@@ -20,7 +20,7 @@
       {{ responseMessage }}
     </ul>
     <ul>
-      后端和数据库建立连接，前端调用数据库表格：
+      后端和数据库建立连接，前端调用数据库表格=>
       <el-button @click="getTableData" size="mini" round>test</el-button>
       <el-button @click="resetTableData" size="mini" round>reset</el-button>
       <el-table :data="tableData" stripe style="width: 100%">
