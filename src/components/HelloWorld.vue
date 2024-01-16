@@ -20,6 +20,16 @@
       {{ responseMessage }}
     </ul>
     <ul>
+      后端和数据库建立连接，前端调用数据库表格：
+      <el-button @click="getTableData" size="mini" round>test</el-button>
+      <el-button @click="resetTableData" size="mini" round>reset</el-button>
+      <el-table :data="tableData" stripe style="width: 100%">
+      <el-table-column prop="id" label="id" width="180"></el-table-column>
+      <el-table-column prop="name" label="姓名" width="180"></el-table-column>
+      <el-table-column prop="email" label="邮箱"></el-table-column>
+    </el-table>
+    </ul>
+    <ul>
       ...
     </ul>
   </div>
@@ -33,7 +43,8 @@ export default {
     name: "HelloWorld",
     data() {
       return {
-        responseMessage: 'null'
+        responseMessage: 'null',
+        tableData: []
       };
     },
     props: {
@@ -52,6 +63,27 @@ export default {
       },
       resetHello() {
         this.responseMessage = 'null';
+      },
+      getTableData() {
+        axios.get('http://localhost:8080/getUser')
+          .then(response => {
+            this.tableData = this.parseData(response.data);
+          })
+          .catch(error => {
+            console.error('Error fetching hello:', error);
+          });
+      },
+      resetTableData() {
+        this.tableData = [];
+      },
+      parseData(data) {
+        return data.map(item => {
+          return {
+            id: item[0],
+            name: item[1],
+            email: item[2]
+          };
+        });
       }
     },
     components: { RouterLink }
