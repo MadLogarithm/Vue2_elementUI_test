@@ -23,10 +23,21 @@
       后端和数据库建立连接，前端调用数据库表格=>
       <el-button @click="getTableData" size="mini" round>test</el-button>
       <el-button @click="resetTableData" size="mini" round>reset</el-button>
-      <el-table :data="tableData" stripe style="width: 100%">
+      <el-table :data="tableData" stripe style="width: 70%">
       <el-table-column prop="id" label="id" width="180"></el-table-column>
       <el-table-column prop="name" label="姓名" width="180"></el-table-column>
       <el-table-column prop="email" label="邮箱"></el-table-column>
+    </el-table>
+    </ul>
+    <ul>
+      可以按id来查找数据，搜索框为空时显示所有数据=>
+      <el-input v-model="selectId" placeholder="null" clearable style="width: 20%;">
+        <el-button slot="append" icon="el-icon-search" @click="selectUser"></el-button>
+      </el-input>
+      <el-table :data="userData" stripe style="width: 70%">
+      <el-table-column prop="id" label="id" width="180"></el-table-column>
+      <el-table-column prop="name" label="姓名" width="180"></el-table-column>
+      <el-table-column prop="age" label="年龄"></el-table-column>
     </el-table>
     </ul>
     <ul>
@@ -44,7 +55,9 @@ export default {
     data() {
       return {
         responseMessage: 'null',
-        tableData: []
+        tableData: [],
+        selectId: null,
+        userData: []
       };
     },
     props: {
@@ -76,6 +89,15 @@ export default {
       },
       resetTableData() {
         this.tableData = [];
+      },
+      selectUser() {
+      axios.get(`http://localhost:8080/user/${this.selectId}`)
+          .then(response => {
+            this.userData = response.data;
+          })
+          .catch(error => {
+            console.error('Error fetching user:', error);
+          });
       },
       parseData(data) {
         return data.map(item => {
