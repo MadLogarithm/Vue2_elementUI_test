@@ -56,7 +56,7 @@ export default {
       return {
         responseMessage: 'null',
         tableData: [],
-        selectId: null,
+        selectId: '',
         userData: []
       };
     },
